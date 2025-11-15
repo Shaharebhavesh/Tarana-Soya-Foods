@@ -330,7 +330,8 @@ body {
 /* Brand colors */
 .icon.instagram:hover { background: #E1306C; }
 .icon.whatsapp:hover  { background: #25D366; }
-
+.icon.youtube:hover   { background: #FF0000; }
+.icon.facebook:hover  { background: #1877F2; }
 /* Mobile friendly */
 @media (max-width: 768px) {
   .footer-follow {
