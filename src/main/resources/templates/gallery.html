@@ -11,6 +11,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
   <style>
 <!--    /* 🌿 Base Reset */
     html, body {
@@ -292,6 +295,77 @@
     .lightbox-close:hover {
       color: #a3d65e;
     }
+
+    /* FOOTER SECTION */
+.footer-follow {
+  background: linear-gradient(135deg, #2b7a3d 0%, #a3d65e 100%);
+  color: #fff;
+  padding: 15px 0 18px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 -3px 12px rgba(255, 255, 255, 0.25);
+}
+
+/* Copyright Text */
+.footer-copy {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 5px 0; /* perfect spacing above icons */
+}
+
+/* Follow Text */
+.follow-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icons .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.25);
+
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover glow */
+.social-icons .icon:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Brand colors */
+.icon.instagram:hover { background: #E1306C; }
+.icon.whatsapp:hover  { background: #25D366; }
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .footer-follow {
+    padding: 18px 0;
+  }
+}
+
+
   </style>
 </head>
 
@@ -363,9 +437,30 @@
 <div id="img6" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="/image/soyabean.jpg"></div>
 
 <!-- 🌾 Footer -->
-<footer>
-  <p>&copy; 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>
+<!--<footer>-->
+<!--  <p>&copy; 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>-->
+<!--</footer>-->
+
+<footer class="footer-follow">
+  <div class="container">
+
+    <p class="footer-copy">© 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>
+
+    <span class="follow-text">Follow Us On</span>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tarana_soya_food" target="_blank" class="icon instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="https://wa.me/918007045071" target="_blank" class="icon whatsapp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+  </div>
 </footer>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
