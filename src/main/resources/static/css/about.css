@@ -1,0 +1,232 @@
+ body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      padding-top: 90px;
+      background: #f6f9f7;
+    }
+
+    /* 🌿 Navbar - Same as Contact Page */
+    .navbar {
+      background-color: #fff !important;
+      transition: all 0.4s ease;
+      padding: 12px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-brand img {
+      width: 100px;
+      height: 70px;
+      transition: transform 0.8s ease;
+    }
+
+    .brand-text {
+      color: #2b7a3d !important;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-nav .nav-link {
+      color: #2b7a3d !important;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ff4f2c !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand img {
+        width: 80px;
+        height: 55px;
+      }
+      .brand-text {
+        font-size: 1.2rem;
+      }
+      .navbar-nav .nav-link {
+        margin: 8px 0;
+        text-align: center;
+      }
+    }
+
+    /* 🌿 Hero Section */
+    .about-hero {
+      background: linear-gradient(135deg, #2b7a3d, #4ac266);
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 230%;
+      height: 230%;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 60%);
+      animation: moveGlow 10s linear infinite;
+    }
+
+    .about-hero h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      animation: slideDown 1.2s ease-in-out;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 15px auto;
+      animation: fadeInUp 1.8s ease-in-out;
+    }
+
+    /* 🥗 About Section */
+    .about-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #ffffff, #f1f9f2);
+    }
+
+    .about-section img {
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transform: scale(0.9);
+      transition: all 0.8s ease;
+      max-width: 60%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      opacity: 0;
+      animation: zoomIn 1.2s ease forwards;
+    }
+
+    .about-section img:hover {
+      transform: scale(1);
+    }
+
+    .about-section h2 {
+      color: #2b7a3d;
+      font-weight: 700;
+      animation: fadeInLeft 1.3s ease;
+    }
+
+    .about-section p {
+      animation: fadeInUp 1.5s ease;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* 🌾 Mission Section */
+    .mission-section {
+     /* background: linear-gradient(135deg, #3e9d58, #2b7a3d);*/
+            background: linear-gradient(135deg, #2b7a3d, #4ac266);
+
+      color: #fff;
+      text-align: center;
+      padding: 50px 15px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-section::before {
+      content: "";
+      position: absolute;
+      width: 630%;
+      height: 630%;
+      top: -150%;
+      left: -150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+      animation: moveGlow 12s linear infinite;
+    }
+
+
+    .mission-section h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      animation: fadeInDown 1.3s ease;
+    }
+
+    .mission-section p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      animation: fadeInUp 1.6s ease;
+    }
+
+    @media (max-width: 768px) {
+      .mission-section {
+        padding: 40px 15px;
+      }
+      .mission-section h3 {
+        font-size: 1.4rem;
+      }
+      .mission-section p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      .about-section img {
+        max-width: 100%;
+      }
+    }
+
+    /* ✨ Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      animation: fadeIn 2s ease;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* 💫 Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(0.9); } }
+    @keyframes moveGlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden !important;
+      position: relative;
+    }
+@media (max-width: 768px) {
+  .about-hero::after,
+  .mission-section::before {
+    width: 180%;
+    height: 180%;
+    top: -40%;
+    left: -40%;
+  }
+}

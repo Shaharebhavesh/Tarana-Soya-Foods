@@ -1,0 +1,271 @@
+/* 🌿 Base Reset */
+/*html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 🌿 Base Layout
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🍃 Brand Name */
+.brand-text {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #2b7a3d !important;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand-text:hover {
+  color: #a3d65e !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+
+
+/* 🌿 Navbar
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0.75rem 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease-in-out;
+  margin: 0;
+  border: none;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links
+.nav-link {
+  color: #2b7a3d !important;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ff4f2c !important;
+}*/
+
+body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      padding-top: 90px;
+      background: #f6f9f7;
+    }
+
+    /* 🌿 Navbar - Same as Contact Page */
+    .navbar {
+      background-color: #fff !important;
+      transition: all 0.4s ease;
+      padding: 12px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-brand img {
+      width: 100px;
+      height: 70px;
+      transition: transform 0.8s ease;
+    }
+
+    .brand-text {
+      color: #2b7a3d !important;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-nav .nav-link {
+      color: #2b7a3d !important;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ff4f2c !important;
+    }
+
+   /* 🍔 Toggler (Same as Contact Page) */
+   /* 🌿 Universal Toggler Style (Use on ALL pages) */
+   .navbar-toggler {
+     border: none !important;
+     background: transparent !important;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: none !important;
+     outline: none !important;
+   }
+
+   .navbar-toggler:focus {
+     box-shadow: none !important;
+     outline: none !important;
+   }
+
+   /* 🍔 Custom Hamburger Icon — SAME ON ALL PAGES */
+   .navbar-toggler-icon {
+     width: 28px !important;
+     height: 28px !important;
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 16 16'%3E%3Cpath stroke='%232b7a3d' stroke-width='2' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E") !important;
+     background-size: contain !important;
+     background-repeat: no-repeat;
+   }
+
+
+
+    @media (max-width: 768px) {
+      .navbar-brand img {
+        width: 80px;
+        height: 55px;
+      }
+      .brand-text {
+        font-size: 1.2rem;
+      }
+      .navbar-nav .nav-link {
+        margin: 8px 0;
+        text-align: center;
+      }
+    }
+
+
+
+/* 🥗 Hero Section */
+.hero-green {
+  background: linear-gradient(135deg, #2b7a3d 0%, #a3d65e 100%);
+  min-height: 100vh; /* full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+  margin: 0;
+  padding-top: 90px; /* ✅ exact offset to prevent hiding under navbar */
+  overflow: hidden;
+}
+
+/* ✨ Hero Text */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeUp 1s ease-in-out forwards, textGlow 2.5s ease-in-out 1s;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  animation: fadeUp 1.2s ease-in-out forwards, textGlow 2.5s ease-in-out 1.2s;
+}
+
+/* 🌟 Explore Products Button */
+.hero-btn {
+  background: linear-gradient(135deg, #b7e778, #8fd14f);
+  color: #14532d;
+  border: none;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  animation: fadeUp 1.5s ease-in-out forwards, buttonPulse 3s ease-in-out infinite 2s;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #a4d760, #78b042);
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(180, 255, 150, 0.6);
+}
+
+/* 🌟 Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(50px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(-5px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 0 rgba(255,255,255,0); }
+  50% { text-shadow: 0 0 25px rgba(255,255,255,0.8); }
+}
+
+@keyframes buttonPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(163, 214, 94, 0); }
+  50% { transform: scale(1.08); box-shadow: 0 0 30px rgba(163, 214, 94, 0.7); }
+}
+
+/* 🌿 Footer */
+footer {
+  background: linear-gradient(135deg, #2b7a3d 0%, #a3d65e 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ff4f2c;
+}
+/* ✅ Fix navbar overlapping top content */
+body {
+  padding-top: 90px; /* same as your .hero-green padding-top */
+}
+
+/* ✅ Normalize toggler icon size across all pages */
+.navbar-toggler {
+  transform: scale(1) !important;
+  width: 48px;
+  height: 48px;
+  border: none !important;
+}
+
+

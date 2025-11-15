@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tarana Soya Foods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🌿 Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold brand-text" href="/">
+      <img src="/image/logo.png" alt="Tarana Soya Foods Logo" width="100" height="70" class="me-2">
+      Tarana Soya Foods
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+<!--        <li class="nav-item"><a class="nav-link fw-bold" href="/products">Products</a></li>-->
+        <li class="nav-item"><a class="nav-link fw-bold" href="/gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/contact">Contact Us</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🌱 Hero Section -->
+<section class="hero-green text-white text-center">
+  <div class="container">
+    <h1 class="hero-title fw-bold">Healthy Living Starts Here</h1>
+    <p class="hero-subtitle">Discover our premium quality soya products that are as nutritious as they are delicious.</p>
+    <a href="/products" class="btn btn-light text-success fw-bold hero-btn">Explore Products</a>
+  </div>
+</section>
+
+<!-- 🌾 Footer -->
+<footer>
+  <p>&copy; 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+<script>
+  const navbar = document.querySelector(".navbar");
+  const logo = document.querySelector(".navbar-brand img");
+
+  window.addEventListener("scroll", function() {
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  logo.addEventListener("mouseover", () => {
+    logo.style.transform = "rotate(360deg) scale(1.1)";
+    logo.style.transition = "transform 1s ease";
+  });
+
+  logo.addEventListener("mouseleave", () => {
+    logo.style.transform = "rotate(0deg) scale(1)";
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+      setTimeout(() => alert.classList.add('show'), 200);
+      setTimeout(() => {
+        alert.style.opacity = '0';
+        alert.style.transform = 'translateY(-10px)';
+        setTimeout(() => alert.remove(), 600);
+      }, 5000);
+    });
+  });
+
+  const form = document.getElementById('contactForm');
+  const sendBtn = document.getElementById('sendBtn');
+  const spinner = document.getElementById('spinner');
+  const btnText = document.getElementById('btnText');
+
+  form.addEventListener('submit', () => {
+    spinner.style.display = 'inline-block';
+    btnText.textContent = 'Sending...';
+    sendBtn.classList.add('btn-sending');
+  });
+</script>
+
+
+</body>
+</html>
