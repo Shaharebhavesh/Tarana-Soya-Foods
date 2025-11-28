@@ -48,7 +48,7 @@ public class ContactController {
                             <p style="margin-top:25px;font-size:14px;color:#666;">You can reply directly to this email to respond.</p>
                         </div>
                         <div style="background:#f8f8f8;padding:15px;text-align:center;border-bottom-left-radius:12px;border-bottom-right-radius:12px;font-size:13px;color:#555;">
-                            &copy; 2025 <strong>Tarana Soya Foods</strong>, Nagpur — All Rights Reserved.
+                            &copy; 2026 <strong>Tarana Soya Foods</strong>, Nagpur — All Rights Reserved.
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ public class ContactController {
                             <p>Warm regards,<br><strong>The Tarana Soya Foods Team</strong></p>
                         </div>
                         <div style="background:#f8f8f8;padding:15px;text-align:center;border-bottom-left-radius:12px;border-bottom-right-radius:12px;font-size:13px;color:#555;">
-                            &copy; 2025 Tarana Soya Foods | Healthy Protein-Rich Choices
+                            &copy; 2026 Tarana Soya Foods | Healthy Protein-Rich Choices
                         </div>
                     </div>
                 </div>
