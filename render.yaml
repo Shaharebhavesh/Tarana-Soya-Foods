@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tarana-soya-foods
+    env: docker
+    repo: https://github.com/Shaharebhavesh/Tarana-Soya-Foods
+    region: oregon
+    plan: free
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
