@@ -10,23 +10,34 @@ import java.util.Base64;
 @Service
 public class GmailEmailService {
 
-    public void sendHtmlEmail(String to, String subject, String html) throws Exception {
+    public void sendHtmlEmail(
+            String to,
+            String subject,
+            String html,
+            String replyTo
+    ) throws Exception {
 
-        // 🔐 Basic validation
         if (to == null || !to.contains("@")) {
             throw new IllegalArgumentException("Invalid recipient email: " + to);
         }
 
+        String encodedSubject =
+                "=?UTF-8?B?" +
+                        Base64.getEncoder().encodeToString(
+                                subject.getBytes(StandardCharsets.UTF_8)
+                        ) +
+                        "?=";
+
         String plainText =
-                "\uD83C\uDF31 Thank you for contacting Tarana Soya Foods!\n\n" +
+                "Thank you for contacting Tarana Soya Foods.\n\n" +
                         "We have received your message and will get back to you shortly.\n\n" +
                         "— Tarana Soya Foods";
 
         String rawEmail =
                 "From: Tarana Soya Foods <bhavesh.shahare05@gmail.com>\r\n" +
                         "To: " + to.trim() + "\r\n" +
-                        "Reply-To: bhavesh.shahare05@gmail.com\r\n" +
-                        "Subject: " + subject + "\r\n" +
+                        "Reply-To: " + replyTo.trim() + "\r\n" +   // 🔥 FIX
+                        "Subject: " + encodedSubject + "\r\n" +
                         "MIME-Version: 1.0\r\n" +
                         "Content-Type: multipart/alternative; boundary=\"boundary\"\r\n\r\n" +
 
@@ -52,10 +63,8 @@ public class GmailEmailService {
                 .send("me", message)
                 .execute();
 
-        // 🔍 DEBUG (keep for now)
-        System.out.println("USER EMAIL SENT TO: " + to);
+        System.out.println("EMAIL SENT TO: " + to);
+        System.out.println("REPLY WILL GO TO: " + replyTo);
         System.out.println("MESSAGE ID: " + sent.getId());
     }
 }
-
-

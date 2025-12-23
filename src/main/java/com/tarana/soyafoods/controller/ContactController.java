@@ -66,8 +66,10 @@ public class ContactController {
             emailService.sendHtmlEmail(
                     "bhavesh.shahare05@gmail.com",
                     "New Contact Form Message from " + safeName,
-                    adminHtml
+                    adminHtml,
+                    safeEmail   // 🔥 reply goes to USER
             );
+            ;
 
             /* ================== USER AUTO-REPLY ================== */
             String userHtml = """
@@ -99,8 +101,10 @@ public class ContactController {
             emailService.sendHtmlEmail(
                     safeEmail,
                     "Thank you for contacting Tarana Soya Foods!",
-                    userHtml
+                    userHtml,
+                    "bhavesh.shahare05@gmail.com"   // 🔥 reply goes to ADMIN
             );
+
 
             redirectAttributes.addFlashAttribute(
                     "successMessage",
