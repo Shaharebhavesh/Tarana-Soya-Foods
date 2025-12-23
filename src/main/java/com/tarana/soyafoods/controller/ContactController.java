@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.HtmlUtils;
+import jakarta.mail.internet.MimeUtility;
+
 
 @Controller
 public class ContactController {
@@ -63,7 +65,7 @@ public class ContactController {
 
             emailService.sendHtmlEmail(
                     "bhavesh.shahare05@gmail.com",
-                    "📩 New Contact Form Message from " + safeName,
+                    "New Contact Form Message from " + safeName,
                     adminHtml
             );
 
@@ -96,7 +98,7 @@ public class ContactController {
 
             emailService.sendHtmlEmail(
                     safeEmail,
-                    "🌱 Thank you for contacting Tarana Soya Foods!",
+                    "Thank you for contacting Tarana Soya Foods!",
                     userHtml
             );
 
