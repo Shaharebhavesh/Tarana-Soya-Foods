@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Contact Tarana Soya Foods, a FSSAI registered and ISO 9001:2015 certified soya food manufacturer in Nagpur. Get in touch for orders and inquiries." />
+
+  <meta name="keywords"
+        content="Contact Tarana Soya Foods, Soya Products Nagpur Contact, Soya Manufacturer Nagpur, FSSAI Certified Soya Foods" />
+  <title>Contact Us | Tarana Soya Foods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+
+  <!-- Apple Touch -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Tarana Soya Foods",
+      "url": "https://www.taranasoyafoods.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nagpur",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "FSSAI License",
+          "identifier": "21524077000116"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "ISO 9001:2015 Certification"
+        }
+      ]
+    }
+  </script>
+
+
+
+  <!-- Bootstrap CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/contact.css">
+
+  <script src="/js/mini-cart.js"></script>
+
+</head>
+
+<body>
+
+<!-- 🌿 Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="/">
+      <img src="/image/logo.png" alt="Tarana Soya Foods Logo" class="me-2">
+      <span class="brand-text">Tarana Soya Foods</span>
+    </a>
+
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link fw-bold" href="/products">Products</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="/contact">Contact Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link position-relative fw-bold dropdown-toggle"
+             href="/cart"
+             id="miniCartToggle"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+
+            🛒 Cart
+            <span id="cartCount"
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  style="display:none;">
+      0
+    </span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end p-3"
+              style="min-width:280px;"
+              id="miniCart">
+            <li class="text-center text-muted small">
+              Loading cart...
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+
+    </div>
+
+
+  </div>
+</nav>
+
+<!-- 🌱 Contact Section -->
+<section class="contact-section text-center">
+  <div class="container">
+    <h1 class="section-title fw-bold text-success">Get in Touch</h1>
+    <p class="section-subtitle text-muted">
+      We’d love to hear from you! Whether you have questions, feedback, or business inquiries — our team is ready to help.
+    </p>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-8">
+        <div th:if="${successMessage}" class="alert alert-success text-center" id="successAlert" role="alert">
+          <span th:text="${successMessage}"></span>
+        </div>
+        <div th:if="${errorMessage}" class="alert alert-danger text-center" id="errorAlert" role="alert">
+          <span th:text="${errorMessage}"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form th:action="@{/contact/send}" method="POST" class="contact-form p-4 rounded shadow-lg bg-white" id="contactForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success fw-bold px-4 py-2" id="sendBtn">
+            <span class="spinner-border spinner-border-sm" id="spinner" role="status" aria-hidden="true"></span>
+            <span id="btnText">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-info">
+          <h4>Contact Information</h4>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot no.15, Pardhe Layout, Mandhar Krupa Society, Hudkeshwar Naka, Nagpur, Maharashtra 440034</p>
+          <p><i class="bi bi-telephone-fill"></i>
+            <a href="tel:+919552000566">+91 9552000566</a>,
+            <a href="tel:+919284240314">+91 9284240314</a>
+          </p>
+          <p><i class="bi bi-envelope-fill"></i>
+            <a href="mailto:taranasoyafoods@gmail.com">taranasoyafoods@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d119117.2944976049!2d79.0433602364866!3d21.095996701910902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bd4b90becef44b9%3A0x2997e324d72a5120!2sPlot%20no.15%20Pardhe%20layout%20mandhar%20krupa%20society%20Hudkeshwar%20naka%2C%20Maharashtra%20440034!3m2!1d21.0960166!2d79.1257619!5e0!3m2!1sen!2sin!4v1762333366216!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<footer>-->
+<!--  <p>&copy; 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>-->
+<!--</footer>-->
+<footer class="footer">
+  <div class="container">
+
+    <p class="footer-copy">FSSAI License No: <strong>21524077000116</strong><br>ISO 9001:2015 Certified<br> © 2026 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>
+
+    <span class="follow-text">Follow Us On</span>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tarana_soya_food" target="_blank" class="icon instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="https://wa.me/918007045071" target="_blank" class="icon whatsapp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+
+
+<!--      <a href="https://www.facebook.com/" target="_blank" class="icon facebook">-->
+<!--        <i class="bi bi-facebook"></i>-->
+<!--      </a>-->
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function() {
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+      setTimeout(() => alert.classList.add('show'), 200);
+      setTimeout(() => {
+        alert.style.opacity = '0';
+        alert.style.transform = 'translateY(-10px)';
+        setTimeout(() => alert.remove(), 600);
+      }, 5000);
+    });
+  });
+
+  const form = document.getElementById('contactForm');
+  const sendBtn = document.getElementById('sendBtn');
+  const spinner = document.getElementById('spinner');
+  const btnText = document.getElementById('btnText');
+
+  form.addEventListener('submit', () => {
+    spinner.style.display = 'inline-block';
+    btnText.textContent = 'Sending...';
+    sendBtn.classList.add('btn-sending');
+  });
+</script>
+
+</body>
+</html>

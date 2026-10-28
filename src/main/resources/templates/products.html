@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Our Products | Tarana Soya Foods</title>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<!--    <link rel="stylesheet" href="/css/product.css">-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+
+
+    <link rel="canonical" href="https://www.taranasoyafoods.com/products">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tarana Soya Foods">
+    <meta property="og:title" content="Soya Products | Tofu, Soya Milk &amp; Soya Chaap | Tarana">
+    <meta property="og:description" content="Explore Tarana Soya Foods&#x27; range of tofu (soya paneer), soya milk and soya chaap in Nagpur. View product details and enquire about local availability.">
+    <meta property="og:url" content="https://www.taranasoyafoods.com/products">
+    <meta property="og:image" content="https://www.taranasoyafoods.com/image/logo.png">
+
+
+</head>
+
+
+
+<!-- 🌿 Navbar -->
+<header class="site-header">
+    <div class="nav-wrap">
+
+        <a class="brand" href="/">
+            <img src="/image/logo.png" alt="Tarana Soya Foods Logo">
+            <span>Tarana Soya Foods</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <nav class="main-nav">
+
+            <a href="/">Home</a>
+
+            <a href="/about">About Us</a>
+
+            <a class="products-link active" href="/products">
+                Products <i class="bi bi-chevron-down"></i>
+            </a>
+
+            <a href="/quality">Quality</a>
+
+            <a href="/why-soya">Why Soya?</a>
+
+            <a href="/recipes">Recipes</a>
+
+            <a class="nav-cta" href="/get-in-touch">
+                <i class="bi bi-telephone-fill"></i>
+                Get in Touch
+            </a>
+
+            <a class="cart-link" href="/cart" aria-label="Cart">
+                <i class="bi bi-bag"></i>
+                <span id="cartCount" class="cart-count" style="display:none">0</span>
+            </a>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- 🌿 Hero Section -->
+<section class="product-hero">
+
+    <div class="product-hero-content">
+
+        <div class="product-eyebrow">
+            <i class="bi bi-leaf-fill"></i>
+            OUR PRODUCTS
+        </div>
+
+        <h1>Pure Nutrition.<br>Made from Soya.</h1>
+
+        <p>
+            Discover our range of fresh, protein-rich soya products,
+            carefully prepared for healthy and delicious everyday meals.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- 🌿 Product Cards -->
+<section class="products-section">
+
+    <div class="container">
+
+        <div class="products-heading">
+
+            <div class="eyebrow">
+                OUR COLLECTION
+            </div>
+
+            <h2>Fresh &amp; Nutritious Soya Products</h2>
+
+            <p>
+                Quality soya products made with care, packed with
+                plant-based protein and perfect for everyday nutrition.
+            </p>
+
+        </div>
+
+
+        <div class="row products-grid g-4">
+
+            <!-- Tofu -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <div class="product-image-wrap">
+                        <img
+                                src="/image/tofu.jpg"
+                                alt="Fresh Tofu (Soya Paneer)"
+                        >
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Tofu (Soya Paneer)</h3>
+
+                        <p>
+                            Soft, protein-packed, and perfect for
+                            curries, salads, and grills.
+                        </p>
+
+                        <div class="product-price">
+                            <span class="price">₹70</span>
+                            <span class="price-label">200 gm</span>
+                        </div>
+
+                        <button
+                                type="button"
+                                class="product-btn"
+                                onclick="showDetails('Tofu (Soya Paneer)')">
+                            <i class="bi bi-eye"></i>
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Soya Milk -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <div class="product-image-wrap">
+                        <img
+                                src="/image/Soyamilk3.png"
+                                alt="Fresh Soya Milk"
+                        >
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Soya Milk</h3>
+
+                        <p>
+                            A natural dairy alternative rich in
+                            calcium and plant-based protein.
+                        </p>
+
+                        <div class="product-price">
+                            <span class="price">₹20</span>
+                            <span class="price-label">250 ml</span>
+                        </div>
+
+                        <button
+                                type="button"
+                                class="product-btn"
+                                onclick="showDetails('Soya Milk')">
+                            <i class="bi bi-eye"></i>
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Soya Chaap -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <div class="product-image-wrap">
+                        <img
+                                src="/image/SoyaChap.jpeg"
+                                alt="Soya Chaap"
+                        >
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Soya Chaap</h3>
+
+                        <p>
+                            Delicious, protein-rich and 100% vegetarian —
+                            perfect for grilling, curries, or snacks.
+                        </p>
+
+                        <div class="product-price">
+                            <span class="price">₹130</span>
+                            <span class="price-label">250 gm</span>
+                        </div>
+
+                        <button
+                                type="button"
+                                class="product-btn"
+                                onclick="showDetails('Soya Chaap')">
+                            <i class="bi bi-eye"></i>
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 🌾 Footer -->
+<!--<footer>-->
+<!--    <p>&copy; 2025 Tarana Soya Foods, Nagpur — All Rights Reserved.</p>-->
+<!--</footer>-->
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="footer-brand"><div class="footer-logo"><img src="/image/logo.png" alt="Tarana logo"><strong>Tarana Soya Foods</strong></div><p>Delivering high-quality soya products<br>that are safe, healthy and made<br>with care for a better tomorrow.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tarana_soya_food" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/918007045071" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div><h4>Quick Links</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/products">Products</a><a href="/quality">Quality</a><a href="/why-soya">Why Soya?</a><a href="/recipes">Recipes</a></div>
+        <div><h4>Our Products</h4><a href="/products">Soya Chunks</a><a href="/products">Soya Granules</a><a href="/products">Soya Flour</a><a href="/products">Soya Beans</a><a href="/products">Soya Mix</a><a href="/products">Bulk Orders</a></div>
+        <div><h4>Contact Info</h4><a href="tel:+918007045071"><i class="bi bi-telephone-fill"></i>+91 8007045071</a><a href="mailto:taranasoyafoods@gmail.com"><i class="bi bi-envelope-fill"></i>taranasoyafoods@gmail.com</a><a href="https://www.google.com/maps/place/Tarana+Soya+Foods/@21.0960216,79.123187,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd4b90becef44b9:0x2997e324d72a5120!8m2!3d21.0960166!4d79.1257619!16s%2Fg%2F11q980gspm?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D"><i class="bi bi-geo-alt-fill"></i>Nagpur<br>Maharashtra - 440034</a></div>
+    </div>
+    <div class="footer-bottom"><span>FSSAI License No: 21524077000116</span><span>ISO 9001:2015 Certified</span><span>© 2026 Tarana Soya Foods, Nagpur — All Rights Reserved.</span></div>
+</footer>
+
+
+
+
+<!-- 🌿 Product Details Modal -->
+<!-- 🌿 Product Details Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-3 shadow">
+
+            <!-- Header -->
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="productTitle"></h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body text-start">
+
+                <div id="productInfo"></div>
+
+                <div class="mt-3">
+                    <label class="fw-semibold">Quantity:</label>
+                    <input type="number" id="qty" class="form-control"
+                           value="0" min="0" style="width:100px;"
+                           onchange="updatePrice()" onkeyup="updatePrice()">
+
+                    <small id="qtyMessage" class="text-danger fw-semibold d-none">
+                        Please select quantity
+                    </small>
+                </div>
+
+                <div class="mt-3">
+                    <label class="fw-semibold">Total Price:</label>
+                    <p class="fw-bold fs-4 text-success" id="totalPrice">₹0</p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer d-flex justify-content-between">
+
+                <!-- Add to Cart -->
+                <form method="post" action="/cart/add" id="addToCartForm">
+                    <input type="hidden" name="productId" id="formProductId">
+                    <input type="hidden" name="name" id="formProductName">
+                    <input type="hidden" name="price" id="formProductPrice">
+                    <input type="hidden" name="quantity" id="formProductQty">
+
+                    <button type="submit"
+                            id="addToCartBtn"
+                            class="btn btn-primary px-4 fw-semibold"
+                            disabled>
+                        Add to Cart
+                    </button>
+                </form>
+
+                <!-- Buy Now -->
+                <a id="buyNowBtn"
+                   class="btn px-4 fw-semibold">
+                    Buy Now
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 🛍️ Offline Alert -->
+
+<div id="offlineAlert"
+     style="
+        position:fixed;
+        right:25px;
+        bottom:25px;
+        z-index:999999;
+        display:none;
+        max-width:390px;
+        padding:16px 45px 16px 20px;
+        background:#ffffff;
+        color:#075522;
+        border-left:5px solid #d57d36;
+        border-radius:12px;
+        box-shadow:0 10px 30px rgba(0,0,0,.20);
+        font-family:Poppins,sans-serif;
+        font-size:14px;
+        line-height:1.6;
+     ">
+
+    <span
+            onclick="closeAlert()"
+            style="
+            position:absolute;
+            top:8px;
+            right:10px;
+            cursor:pointer;
+            font-size:14px;
+        ">
+        ❌
+    </span>
+
+    🛒 We are currently selling <strong>offline only</strong>.<br>
+    Please visit our local store for purchases!
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">
+                🛒 Item added to cart
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+const productDetails = {
+    "Tofu (Soya Paneer)": {
+        id: 1,
+        price: 70,
+         description: `
+       <strong>Ingredients:</strong><br>
+       Soyabean, Water, Coagulant (Calcium Sulphate).<br><br>
+
+       <strong>Nutritional Information (per 100g approx):</strong>
+       <table class="table table-bordered mt-2">
+         <tbody>
+           <tr><td>Energy</td><td>240 kcal</td></tr>
+           <tr><td>Protein</td><td>22.00 gm</td></tr>
+           <tr><td>Total Fat</td><td>10.00 gm</td></tr>
+           <tr><td>Carbohydrate</td><td>15.9 gm</td></tr>
+           <tr><td>Cholestrol</td><td>0.0 gm</td></tr>
+           <tr><td>Calcium</td><td>110 mg</td></tr>
+         </tbody>
+       </table>
+
+       <strong>MRP:</strong> ₹70 / 200gm <br><br>
+       <em>Currently available offline only.</em>
+	`
+    },
+    "Soya Milk": {
+        id: 2,
+        price: 20,
+         description: `
+       <strong>Ingredients:</strong><br>
+       Soyabean, Salt, Sugar, Cardamom.<br><br>
+
+       <strong>Nutritional Information (per 200ml approx):</strong>
+       <table class="table table-bordered mt-2">
+         <tbody>
+           <tr><td>Calories</td><td>100.6 kcal</td></tr>
+           <tr><td>Protein</td><td>8.16 gm</td></tr>
+           <tr><td>Total Fat</td><td>3.6 gm</td></tr>
+           <tr><td>Total Carbohydrate</td><td>8.9 gm</td></tr>
+                      <tr><td>Sugar</td><td>4 gm</td></tr>
+
+         </tbody>
+       </table>
+
+       <strong>MRP:</strong> ₹20 / 250ml <br><br>
+       <em>Currently available offline only.</em>
+	`
+    },
+    "Soya Chaap": {
+        id: 3,
+        price: 130,
+        description: `
+       <strong>Ingredients:</strong><br>
+       Soyabean, Wheat Gluten, Spices.<br><br>
+
+       <strong>Nutritional Information (per 100g approx):</strong>
+       <table class="table table-bordered mt-2">
+         <tbody>
+           <tr><td>Calories</td><td>147 kcal</td></tr>
+           <tr><td>Protein</td><td>15 g</td></tr>
+           <tr><td>Fat</td><td>7 g</td></tr>
+         </tbody>
+       </table>
+
+       <strong>MRP:</strong> ₹130 / 250gm <br><br>
+       <em>Currently available offline only.</em>
+     `
+
+    }
+};
+
+let selectedProductName = "";
+
+function showDetails(title) {
+  selectedProductName = title;
+  const product = productDetails[title];
+
+  document.getElementById("productTitle").innerText = title;
+  document.getElementById("productInfo").innerHTML = product.description;
+
+  document.getElementById("qty").value = 0;
+  document.getElementById("totalPrice").innerText = "₹0";
+  document.getElementById("qtyMessage").classList.remove("d-none");
+  document.getElementById("addToCartBtn").disabled = true;
+
+  new bootstrap.Modal(document.getElementById("productModal")).show();
+}
+
+function updatePrice() {
+    if (!selectedProductName) return;
+
+    const product = productDetails[selectedProductName];
+
+    let qty = parseInt(document.getElementById("qty").value);
+    if (isNaN(qty) || qty < 0) qty = 0;
+
+    const total = product.price * qty;
+
+    // Keep quantity and total price ACTIVE
+    document.getElementById("totalPrice").innerText = "₹" + total;
+
+    const msg = document.getElementById("qtyMessage");
+
+    if (qty === 0) {
+        msg.classList.remove("d-none");
+    } else {
+        msg.classList.add("d-none");
+    }
+
+    // Keep Add to Cart DISABLED
+    document.getElementById("addToCartBtn").disabled = true;
+
+    // Keep Buy Now DISABLED
+    const buyBtn = document.getElementById("buyNowBtn");
+    buyBtn.removeAttribute("href");
+    buyBtn.style.pointerEvents = "none";
+
+    // Keep form data ready for future online ordering
+    document.getElementById("formProductId").value = product.id;
+    document.getElementById("formProductName").value = selectedProductName;
+    document.getElementById("formProductPrice").value = product.price;
+    document.getElementById("formProductQty").value = qty;
+}
+
+</script>
+
+
+<script>
+    window.addEventListener("load", function () {
+
+        const alertBox = document.getElementById("offlineAlert");
+
+        if (!alertBox) {
+            console.error("offlineAlert not found");
+            return;
+        }
+
+        // SHOW
+        alertBox.style.display = "block";
+
+        // AUTO HIDE AFTER 5 SECONDS
+        setTimeout(function () {
+            alertBox.style.display = "none";
+        }, 5000);
+    });
+
+    function closeAlert() {
+        const alertBox = document.getElementById("offlineAlert");
+
+        if (alertBox) {
+            alertBox.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".main-nav");
+
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener("click", function () {
+            nav.classList.toggle("open");
+
+            const isOpen = nav.classList.contains("open");
+
+            toggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
+        });
+
+    });
+</script>
+
+<script src="/js/mini-cart.js"></script>
+
+</body>
+</html>
