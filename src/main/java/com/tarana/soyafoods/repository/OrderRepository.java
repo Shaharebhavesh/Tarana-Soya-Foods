@@ -1,7 +1,7 @@
-package com.tarana.soyafoods.repository;
-
-import com.tarana.soyafoods.model.Order;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface OrderRepository extends JpaRepository<Order, Long> {
-}
+//package com.tarana.soyafoods.repository;
+//
+//import com.tarana.soyafoods.model.Order;
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//public interface OrderRepository extends JpaRepository<Order, Long> {
+//}
