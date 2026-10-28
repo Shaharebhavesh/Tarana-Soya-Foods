@@ -932,3 +932,95 @@ body {
 
 
 }
+
+
+/* =========================================
+   LARGE DESKTOP, TV & ULTRA-WIDE SCREENS
+   ========================================= */
+
+@media screen and (min-width: 1600px) {
+
+    .site-header {
+        height: 96px;
+    }
+
+    .nav-wrap {
+        max-width: 1800px;
+        width: 100%;
+        padding: 0 48px;
+    }
+
+    .brand {
+        font-size: 32px;
+    }
+
+    .brand img {
+        width: 94px;
+        height: 70px;
+        margin-right: 12px;
+    }
+
+    .main-nav {
+        gap: 28px;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .main-nav > a {
+        font-size: 16px;
+        white-space: nowrap;
+        padding: 36px 0 30px;
+    }
+
+    .main-nav > a.active:after {
+        bottom: 22px;
+    }
+
+    .nav-cta {
+        padding: 14px 22px !important;
+    }
+
+    .cart-link {
+        font-size: 22px !important;
+    }
+
+    /* Keep page content centered on wide screens */
+    .hero {
+        margin-top: 96px;
+    }
+
+    .hero-content {
+        max-width: 1500px;
+        padding-left: 20px;
+    }
+}
+
+/* Extra-wide TVs and 4K displays */
+@media screen and (min-width: 2000px) {
+
+    .nav-wrap {
+        max-width: 2000px;
+        padding: 0 60px;
+    }
+
+    .brand {
+        font-size: 35px;
+    }
+
+    .brand img {
+        width: 100px;
+        height: 76px;
+    }
+
+    .main-nav {
+        gap: 34px;
+    }
+
+    .main-nav > a {
+        font-size: 18px;
+    }
+
+    .nav-cta {
+        padding: 16px 26px !important;
+    }
+}
